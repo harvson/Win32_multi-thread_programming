@@ -1,0 +1,5 @@
+cmake-build-*
+
+*.ini
+.idea
+*.html
