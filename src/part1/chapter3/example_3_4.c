@@ -49,7 +49,7 @@ int main() {
                                                (LPVOID) slot,
                                                0,
                                                &threadId));
-        printf("Launched thread #%d (slot %d)\n", i, slot);
+        printf("Launched thread #%d (slot %d)\n", i - 1, slot);
     }
 
     /* 现在等待所有线程终止 */
