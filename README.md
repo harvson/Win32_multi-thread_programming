@@ -14,3 +14,12 @@ Jim Beveridge & Robert Wiener 著 侯 捷 译
 [第3章 快跑与等待](docs/第3章%20快跑与等待.md)
 
 [第4章 同步控制](docs/第4章%20同步控制.md)
+
+[第5章 不要让线程成为脱缰野马](docs/第5章%20不要让线程成为脱缰野马.md)
+
+[第6章 Overlapped IO,在你身后变戏法](docs/第6章%20Overlapped%20IO,在你身后变戏法.md)
+
+
+
+
+
