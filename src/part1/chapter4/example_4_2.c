@@ -87,7 +87,6 @@ DWORD WINAPI ThreadFunction(LPVOID lpParam) {
     return 0;
 }
 
-
 int main() {
     List *list1 = CreateList();
     List *list2 = CreateList();

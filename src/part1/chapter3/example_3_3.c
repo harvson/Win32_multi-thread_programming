@@ -5,10 +5,7 @@
 * This is from Chapter 3, Listing 3-2
  * 6个任务，3个线程
 *
-* Call ThreadFunc NUM_TASKS times, using
-* no more than THREAD_POOL_SIZE threads.
-* This version uses WaitForSingleObject,
-* which gives a very suboptimal solution.
+* 调用 ThreadFunc NUM_TASKS 次，使用不超过 THREAD_POOL_SIZE 线程。此版本使用 WaitForSingleObject，它提供了一个非常次优的解决方案。
 *
 * Build command： cl /MD TaskQueS.c
 */
@@ -34,10 +31,6 @@ int main() {
     int i;
     DWORD exitCode;
 
-    /* i= 1 2 3 4 5 6 7 8 9
-    * Start Thread X X X X X X
-    * Wait on thread X X X X X X
-    */
     for (i = 1; i <= NUM_TASKS; i++) {
         if (i > THREAD_POOL_SIZE) {
             WaitForSingleObject(hThrds[slot], INFINITE);
@@ -72,8 +65,8 @@ int main() {
 DWORD WINAPI ThreadFunc(LPVOID n) {
     srand(GetTickCount());
     int random_sleep_time = (rand() % 8) * 500 + 500;
-    printf("sleep for %d ms\n", random_sleep_time);
+//    printf("sleep for %d ms\n", random_sleep_time);
     Sleep(random_sleep_time);
-    printf("Slot %d idle\n", n);
+//    printf("Slot %d idle\n", n);
     return ((DWORD) n);
 }

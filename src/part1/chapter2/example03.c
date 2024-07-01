@@ -58,8 +58,7 @@ int main() {
             puts("Thread 1 is still running!");
         if (exitCode2 == STILL_ACTIVE)
             puts("Thread 2 is still running!");
-        if (exitCode1 != STILL_ACTIVE
-            && exitCode2 != STILL_ACTIVE)
+        if (exitCode1 != STILL_ACTIVE && exitCode2 != STILL_ACTIVE)
             break;
     }
 
@@ -71,7 +70,6 @@ int main() {
 
     return EXIT_SUCCESS;
 }
-
 
 /*
 * Take the startup value, do some simple math on it,

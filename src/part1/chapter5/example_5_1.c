@@ -5,7 +5,7 @@
 * Sample code for "Multithreading Applications in Win32"
 * This is from Chapter 5, Listing 5-1
 *
-* Demonstrates how to request threads to exit.
+* 演示如何请求线程退出。
 *
 * Build command: cl /MD ThrdTerm.c
 */
@@ -29,8 +29,7 @@ int main() {
     int i;
 
     // 所有线程共用同一个 event 对象
-    hRequestExitEvent = CreateEvent(
-            NULL, TRUE, FALSE, NULL);
+    hRequestExitEvent = CreateEvent(NULL, TRUE, FALSE, NULL);
 
     for (i = 0; i < 2; i++)
         MTVERIFY(hThreads[i] = CreateThread(NULL,
@@ -59,7 +58,7 @@ DWORD WINAPI ThreadFunc(LPVOID p) {
 
     UNREFERENCED_PARAMETER(p);
 
-    /* Seed the random-number generator */
+    /* 为随机数生成器设定种子 */
     srand((unsigned) time(NULL));
 
     for (i = 0; i < 1000000; i++) {

@@ -31,7 +31,7 @@ int main() {
     for (i = 1; i <= NUM_TASKS; i++) {
         /* 在使用池中的所有线程之前，不需要等待一个线程退出 */
         if (i > THREAD_POOL_SIZE) {
-            /* Wait for one thread to terminate */
+            /* 等待一个线程终止 */
             rc = WaitForMultipleObjects(
                     THREAD_POOL_SIZE,
                     hThrds,
@@ -42,7 +42,7 @@ int main() {
             printf("Slot %d terminated\n", slot);
             MTVERIFY(CloseHandle(hThrds[slot]));
         }
-        /* Create a new thread in the given available slot */
+        /* 在给定的可用插槽中创建新线程 */
         MTVERIFY(hThrds[slot++] = CreateThread(NULL,
                                                0,
                                                ThreadFunc,
